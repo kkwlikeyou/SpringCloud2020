@@ -14,9 +14,9 @@
         <module name="cloud-provider-payment8001" />
         <module name="cloud-eureka-server7002" />
         <module name="cloud-consumerConsul-order80" />
+        <module name="cloud-consumerZookeeper-order80" />
         <module name="cloud-consumer-order80" />
         <module name="cloud-provider-payment8006" />
-        <module name="cloud-consumerzk-order80" />
       </profile>
     </annotationProcessing>
   </component>
