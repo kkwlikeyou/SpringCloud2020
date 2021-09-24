@@ -6,11 +6,17 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
+
 feign:
   client:
     config:
       default:
         connect-timeout: 5000
         read-timeout: 5000
+
+logging:
+  level:
+    com.kkwli.springcloud.service.PaymentFeignService: debug
+
 
 
