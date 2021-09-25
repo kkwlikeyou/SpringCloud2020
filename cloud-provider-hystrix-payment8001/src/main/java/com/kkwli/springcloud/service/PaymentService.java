@@ -24,13 +24,13 @@ public class PaymentService {
     })
     public String paymentInfo_TimeOut(Integer id) {
         int timeNumber = 5;
-        int age = 10/0;
-        /*try {
+        /*int age = 10/0;*/
+        try {
 
             TimeUnit.SECONDS.sleep(timeNumber);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
         return "线程池:" + Thread.currentThread().getName() + "\tpaymentInfo_TimeOut,id:" + id + "\t哈哈,耗时" + timeNumber + "秒";
     }
 
