@@ -40,11 +40,6 @@ public class OrderHystrixController {
         return paymentHystrixService.paymentInfo_TimeOut(id);
     }
 
-
-    public String paymentTimeOutFallbackMethod(@PathVariable("id") Integer id) {
-        return "线程池:" + Thread.currentThread().getName() + "\t客户端服务降级,id:" + id + "\t(っ °Д °;)っ";
-    }
-
     //下面是全局fallback方法
     public String defaultFallback() {
         return "客户端服务降级";
