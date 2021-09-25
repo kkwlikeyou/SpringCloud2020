@@ -7,6 +7,9 @@ SpringCloud: https://spring.io/projects/spring-cloud/
 这个网址是各springcloud组件的配置介绍，自己搭建组件环境可以考虑看这个。  
 
 Hystrix: https://github.com/Netflix/Hystrix 
+Zuul 1.x: https://github.com/Netflix/zuul
+
+SpringCloud Gateway: https://spring.io/projects/spring-cloud-gateway#learn
 
 Seata： https://seata.io/zh-cn/docs/overview/what-is-seata.html  
 分布式事务解决的框架，文档介绍很详细，推荐。  
