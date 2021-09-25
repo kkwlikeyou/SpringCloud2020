@@ -2,6 +2,7 @@ package com.kkwli.springcloud.controller;
 
 
 import com.kkwli.springcloud.service.PaymentHystrixService;
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +20,7 @@ import javax.annotation.Resource;
  */
 @RestController
 @Slf4j
+@DefaultProperties(defaultFallback = "defaultFallback")
 public class OrderHystrixController {
     @Resource
     private PaymentHystrixService paymentHystrixService;
@@ -30,9 +32,10 @@ public class OrderHystrixController {
     }
 
     @GetMapping("/consumer/payment/hystrix/timeout/{id}")
-    @HystrixCommand(fallbackMethod = "paymentTimeOutFallbackMethod",commandProperties = {
+    /*@HystrixCommand(fallbackMethod = "paymentTimeOutFallbackMethod",commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds" , value = "1500")
-    })
+    })*/
+    @HystrixCommand
     String paymentInfo_TimeOut(@PathVariable("id") Integer id) {
         return paymentHystrixService.paymentInfo_TimeOut(id);
     }
@@ -40,5 +43,10 @@ public class OrderHystrixController {
 
     public String paymentTimeOutFallbackMethod(@PathVariable("id") Integer id) {
         return "线程池:" + Thread.currentThread().getName() + "\t客户端服务降级,id:" + id + "\t(っ °Д °;)っ";
+    }
+
+    //下面是全局fallback方法
+    public String defaultFallback() {
+        return "客户端服务降级";
     }
 }
