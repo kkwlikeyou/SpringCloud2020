@@ -9,6 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-config-center3344" />
         <module name="cloud-provider-payment8002" />
+        <module name="cloud-config-client3355" />
+        <module name="cloud-config-client3366" />
         <module name="cloud-provider-payment8004" />
         <module name="cloud-eureka-server7001" />
         <module name="cloud-api-commons" />
