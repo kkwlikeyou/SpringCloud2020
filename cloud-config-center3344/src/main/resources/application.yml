@@ -1,0 +1,20 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          skipSslValidation: true # 跳过ssl认证
+          uri: https://github.com/kkwlikeyou/SpringCloud-Config.git
+          search-paths:
+            - com.Springcloud-Config
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
