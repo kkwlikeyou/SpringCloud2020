@@ -25,6 +25,9 @@ spring:
 #            - After=2021-09-26T09:20:09.629+08:00[Asia/Shanghai]
 #            - Cookie=username,kkwli
 #            - Header=X-Request-Id, \d+
+#            filters:
+#              - AddRequestHeader=X-Request-Id, 1024
+
 
 eureka:
   instance:
