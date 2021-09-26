@@ -2,7 +2,7 @@
 尚硅谷B站视频: https://www.bilibili.com/video/BV18E411x7eT?p=35&share_source=copy_web  
 详细笔记请参考:  
 https://blog.csdn.net/qq_42107430/article/details/104683947  
-https://www.yuque.com/books/share/31d864d1-b6ff-4bd1-8569-2dec720e8306
+https://www.yuque.com/books/share/31d864d1-b6ff-4bd1-8569-2dec720e8306  
 
 # 官网文档传送门：
 SpringCloud: https://spring.io/projects/spring-cloud/
